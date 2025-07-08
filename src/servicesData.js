@@ -37,4 +37,21 @@ export const services = {
     groundworkReduction: true,
     requiresDocCount: true,
   },
+  "Administrative Workflow Development": {
+    description: "Developing structured administrative workflows and operating manuals for businesses with unstructured administration, ensuring compliance with South African regulations.",
+    tasks: [
+      { name: "Process Assessment", hours: 4, description: "Analyze client's current administrative processes and identify gaps in structure and efficiency." },
+      { name: "Workflow Design", hours: 4.5, description: "Design structured workflows for administration including HR, finance, compliance, and operational procedures." },
+      { name: "Manual Drafting", hours: 7.5, description: "Create comprehensive operating manuals with detailed flowcharts and step-by-step procedures." },
+      { name: "Compliance Integration", hours: 3, description: "Ensure alignment with POPIA, OHSA, Labour Relations Act, and other South African regulatory requirements." },
+      { name: "Review and Refinement", hours: 3, description: "Finalize manuals and workflows based on client feedback and operational testing." },
+      { name: "Training Support (Optional)", hours: 2, description: "Provide guidance and training to staff on implementing new administrative workflows." },
+    ],
+    groundworkReduction: true,
+    requiresDocCount: false,
+    supportsPercentagePricing: true,
+    estimatedHours: { min: 15, max: 30 },
+    complianceAreas: ["POPIA", "OHSA", "Labour Relations Act", "Basic Conditions of Employment Act"],
+    deliverables: ["Administrative Process Manual", "Workflow Flowcharts", "Compliance Checklists", "Implementation Timeline"]
+  },
 };

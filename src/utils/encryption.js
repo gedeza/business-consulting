@@ -1,22 +1,42 @@
 
 // src/utils/encryption.js
+import CryptoJS from 'crypto-js';
 
-const XOR_KEY = 'your_super_secret_key'; // In a real application, this should be securely managed
+// Generate a more secure key (in production, use environment variables)
+const ENCRYPTION_KEY = process.env.REACT_APP_ENCRYPTION_KEY || 'SA-Business-Consulting-App-2025-SecureKey';
 
 export const encrypt = (text) => {
-  return btoa(text.split('').map((char, i) =>
-    String.fromCharCode(char.charCodeAt(0) ^ XOR_KEY.charCodeAt(i % XOR_KEY.length))
-  ).join(''));
+  try {
+    if (!text || typeof text !== 'string') {
+      throw new Error('Invalid input for encryption');
+    }
+    return CryptoJS.AES.encrypt(text, ENCRYPTION_KEY).toString();
+  } catch (error) {
+    console.error('Encryption failed:', error);
+    throw new Error('Data encryption failed');
+  }
 };
 
 export const decrypt = (encryptedText) => {
   try {
-    const decrypted = atob(encryptedText).split('').map((char, i) =>
-      String.fromCharCode(char.charCodeAt(0) ^ XOR_KEY.charCodeAt(i % XOR_KEY.length))
-    ).join('');
-    return decrypted;
-  } catch (e) {
-    console.error("Decryption failed:", e);
-    return null; // Handle decryption errors gracefully
+    if (!encryptedText || typeof encryptedText !== 'string') {
+      return null;
+    }
+    const bytes = CryptoJS.AES.decrypt(encryptedText, ENCRYPTION_KEY);
+    const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+    return decrypted || null;
+  } catch (error) {
+    console.error('Decryption failed:', error);
+    return null;
+  }
+};
+
+// Utility function to safely parse JSON with fallback
+export const safeJsonParse = (jsonString, fallback = null) => {
+  try {
+    return JSON.parse(jsonString);
+  } catch (error) {
+    console.error('JSON parsing failed:', error);
+    return fallback;
   }
 };

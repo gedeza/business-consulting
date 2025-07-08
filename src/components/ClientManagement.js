@@ -43,8 +43,8 @@ const ClientManagement = () => {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Client Management</h2>
+    <div className="max-w-4xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Client Management</h2>
       <ClientForm onSaveClient={handleSaveClient} editingClient={editingClient} setEditingClient={setEditingClient} />
       <ClientList clients={clients} onSelectClient={handleSelectClient} onDeleteClient={handleDeleteClient} />
     </div>
