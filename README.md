@@ -1,9 +1,34 @@
-# South African Business Consulting Cost Estimator
+# South African Business Consulting Platform
+
+> **A comprehensive, professional React.js web application designed specifically for South African business consultants. This platform enables transparent pricing, client management, and professional quote generation with full compliance to South African regulations (POPIA, VAT, B-BBEE).**
+
+![Business Consulting](https://img.shields.io/badge/Platform-Business%20Consulting-blue)
+![React](https://img.shields.io/badge/React-19.x-61dafb)
+![POPIA](https://img.shields.io/badge/POPIA-Compliant-green)
+![VAT](https://img.shields.io/badge/VAT-Ready-orange)
+![B-BBEE](https://img.shields.io/badge/B--BBEE-Integrated-purple)
 
 ## 🚀 Overview
-A comprehensive, professional React.js web application designed specifically for South African business consultants. This platform enables transparent pricing, client management, and professional quote generation with full compliance to South African regulations (POPIA, VAT, B-BBEE).
+
+A modern, feature-rich business consulting platform built specifically for the South African market. Streamline your consulting business with professional quote generation, comprehensive client management, and regulatory compliance tools.
+
+### 🎯 Perfect For:
+- **Business Consultants** seeking professional quote generation
+- **SME Advisors** managing multiple client relationships  
+- **Compliance Specialists** requiring POPIA/VAT/B-BBEE integration
+- **Consulting Firms** needing standardized pricing models
 
 ## ✨ Key Features
+
+### 🌟 **Core Capabilities**
+- ✅ **Professional Quote Generation** with PDF export
+- ✅ **Dual Pricing Models** (Hourly & Percentage-based)
+- ✅ **Client Management System** with CSV import/export
+- ✅ **South African Compliance** (POPIA, VAT, B-BBEE)
+- ✅ **Multi-language Support** (English, Afrikaans, isiZulu)
+- ✅ **Custom Services** creation and management
+- ✅ **Template Library** for business documents
+- ✅ **Mobile-Responsive** design
 
 ### 💰 Dual Pricing Models
 - **Hourly Rate Model**: Traditional time-based pricing (R900-R1,800/hour)
